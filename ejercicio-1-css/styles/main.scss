@@ -1,0 +1,48 @@
+@use "sass:color";
+
+$blue: blue;
+$green: green;
+$red: red;
+$step: 10%;
+
+@function calculateColorAdjust($baseColor, $index) {
+  @return color.scale($baseColor, $lightness: $step * $index);
+}
+
+@mixin colorize($color) {
+  background-color: $color;
+
+  @if color.channel($color, "lightness", $space: hsl) > 50% {
+    color: #000;
+  } @else {
+    color: #fff;
+  }
+}
+
+@mixin palette($base) {
+  .base-color {
+    @include colorize($base);
+  }
+
+  @for $i from 1 through 4 {
+    .darken-#{$i} {
+      @include colorize(calculateColorAdjust($base, -$i));
+    }
+
+    .lighten-#{$i} {
+      @include colorize(calculateColorAdjust($base, $i));
+    }
+  }
+}
+
+.container-red {
+  @include palette($red);
+}
+
+.container-blue {
+  @include palette($blue);
+}
+
+.container-green {
+  @include palette($green);
+}

@@ -1,0 +1,9 @@
+:root {
+  --color-base: #2200ff;
+  --color-important: #14005e;
+  --color-warning: #00ffff;
+  --fuente-principal: "Times New Roman", serif;
+  --fuente-secundaria: "Times New Roman", serif;
+  --radius: 10;
+  --sombra: 4px 4px 8px rgba(0, 0, 0, 0.35);
+}

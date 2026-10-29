@@ -1,0 +1,9 @@
+:root {
+  --color-base: #ff1a00;
+  --color-important: #600000;
+  --color-warning: #ffb6c1;
+  --fuente-principal: serif;
+  --fuente-secundaria: monospace;
+  --radius: 5px;
+  --sombra: 6px 6px 8px #000;
+}

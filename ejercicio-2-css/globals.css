@@ -1,0 +1,23 @@
+@import "./themes/styles-a.css";
+
+.caja {
+  border-radius: var(--radius);
+}
+.caja-base {
+  background: var(--color-base);
+}
+.caja-important {
+  background: var(--color-important);
+}
+.caja-warning {
+  background: var(--color-warning);
+}
+.fuente-principal {
+  font-family: var(--fuente-principal);
+}
+.fuente-secundaria {
+  font-family: var(--fuente-secundaria);
+}
+.caja-sombra {
+  box-shadow: var(--sombra);
+}
